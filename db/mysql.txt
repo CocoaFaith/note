@@ -1,0 +1,24 @@
+新增用户
+create user 'test'@'%' identified by '123456';
+
+删除用户
+drop user 'test'@'%';
+
+授权
+GRANT SELECT,UPDATE,INSERT,DELETE,EXECUTE ON db.* TO 'test'@'%';
+FLUSH GRANTS;
+
+查看权限
+show grants for  'test'@'%';
+
+回收权限
+revoke create on *.* from 'test'@'%';
+FLUSH GRANTS;
+
+清除主从日志
+SHOW SLAVE STATUS;
+SHOW MASTER LOGS;
+SHOW MASTER STATUS;
+show binlog events;
+
+PURGE MASTER LOGS BEFORE DATE_SUB( NOW( ), INTERVAL 10 DAY);

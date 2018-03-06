@@ -1,0 +1,4 @@
+Çå³ýdocker ÈÕÖ¾
+docker ps -a
+docker inspect CONTAINER ID
+cat /dev/null > /var/log/......log-json.log
